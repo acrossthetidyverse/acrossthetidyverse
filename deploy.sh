@@ -3,7 +3,7 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-hugo -t base16 # if using a theme, replace by `hugo -t <yourtheme>`
+Rscript -e 'blogdown::build_site()' # if using a theme, replace by `hugo -t <yourtheme>`
 
 # Go To Public folder
 cd public
