@@ -7,7 +7,6 @@ preserveTaxonomyNames = true
 paginate = 3
 disqusShortname = "shortname"
 googleAnalytics = ""
-pygmentsuseclasses = true
 
 [params]
     # Sets the meta tag description, usually reserved for the main page

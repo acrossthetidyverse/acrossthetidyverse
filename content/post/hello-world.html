@@ -12,6 +12,7 @@ categories: ["R"]
 
 <div id="r-markdown" class="section level1">
 <h1>R Markdown</h1>
+<p>this is an example of <code>inline code</code>.</p>
 <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
 <p>You can embed an R code chunk like this:</p>
 <pre class="r"><code>summary(cars)
@@ -35,6 +36,7 @@ fit
 <div id="including-plots" class="section level1">
 <h1>Including Plots</h1>
 <p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
+<p>{{% highlight r %}}</p>
 <pre class="r"><code>par(mar = c(0, 1, 0, 1))
 pie(
   c(280, 60, 20),
@@ -47,6 +49,20 @@ pie(
 <p class="caption">
 Figure 1: A fancy pie chart.
 </p>
+</div>
+<p>{{% /highlight %}}</p>
+<div id="including-code-examples" class="section level2">
+<h2>including code examples</h2>
+{{% highlight html %}}
+<section id="main">
+<div>
+<pre><code>&lt;h1 id=&quot;title&quot;&gt;{{ .Title }}&lt;/h1&gt;
+{{ range .Data.Pages }}
+  {{ .Render &quot;summary&quot;}}
+{{ end }}</code></pre>
+</div>
+</section>
+<p>{{% /highlight %}}</p>
 </div>
 </div>
 
