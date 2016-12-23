@@ -7,6 +7,7 @@ preserveTaxonomyNames = true
 paginate = 3
 disqusShortname = "shortname"
 googleAnalytics = ""
+pygmentsuseclasses = true
 
 [params]
     # Sets the meta tag description, usually reserved for the main page
@@ -18,7 +19,6 @@ googleAnalytics = ""
     socialAppearAtBottom = true
     # set this to the section name if section is not post
     viewMorePostLink     = "/blog/"
-    pygmentsuseclasses = true
 
 # Optional Params
     categoriesByCount    = true
@@ -33,11 +33,11 @@ googleAnalytics = ""
     # minifiedFilesCSS and minifiedFilesJS. The variable is an array so that you
     # can load multiple files if necessary. You can also load the standard theme
     # files by adding the value, "default".
-    # customCSS            = ["default", "/path/to/file"]
+      customCSS            = ["default", "default.css"]
     # customJS             = ["default", "/path/to/file"]
 
     # Loading min files for exampleSite
-    customCSS            = ["/css/main.min.css"]
+  #  customCSS            = ["/css/main.min.css"]
     customJS             = ["/js/main.min.js"]
 
 # parms.intro will appear on the sidebar
