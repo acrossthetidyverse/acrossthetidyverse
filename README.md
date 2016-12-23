@@ -1,3 +1,0 @@
-# acrossthetidyverse
-
-The beginning of a great thing...
