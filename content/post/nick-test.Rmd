@@ -1,0 +1,96 @@
+---
+title: "testing…123"
+author: "Nicholas Tierney"
+date: "25/12/2016"
+output: html_document
+---
+
+So this is a test, to see what other plots and stuff look like.
+
+Let's give naniar a spin, shall we?
+
+```{r}
+library(tidyverse)
+library(visdat)
+library(naniar)
+
+```
+
+How does visdat look?
+
+```{r}
+
+vis_miss(airquality)
+vis_dat(airquality)
+```
+
+
+And then what about some missing data plots?
+
+```{r}
+
+ggplot(data = airquality,
+       aes(x = Ozone,
+           y = Temp)) + 
+  geom_missing_point()
+
+```
+
+How about tables? How do they look?
+
+```{r}
+
+summary_missing_var(airquality) %>%
+  knitr::kable()
+
+```
+
+
+And then, for fun, let's try out `treezy`
+
+```{r}
+
+library(treezy)
+library(rpart)
+library(rpart.plot)
+
+
+airquality %>%
+  add_prop_miss() %>%
+  rpart(prop_miss ~ ., data = .) %>%
+  importance_plot()
+  
+
+```
+
+And does it deal with mathematical notation?
+
+$$
+y \sim \beta_0 + \beta_1 + \epsilon
+$$
+
+What about interactive graphics?
+
+```{r}
+
+library(plotly)
+
+ggplotly(vis_dat(airquality))
+
+
+
+```
+
+
+```{r}
+library(leaflet)
+library(maxcovr)
+
+york_crime %>%
+  leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers()
+
+
+```
+
