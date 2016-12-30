@@ -50,6 +50,7 @@ div.clearfix {
 
 article.single section,
 .article-list article {
+  border-radius: 25px;
   background-color: #f2f0ec;
   color: #2d2d2d;
   padding-left: 128px;
