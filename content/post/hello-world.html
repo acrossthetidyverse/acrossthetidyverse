@@ -42,10 +42,17 @@ fit
 <p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>))
 <span class="kw">pie</span>(
-  <span class="kw">c</span>(<span class="dv">280</span>, <span class="dv">60</span>, <span class="dv">20</span>),
-  <span class="kw">c</span>(<span class="st">&#39;Sky&#39;</span>, <span class="st">&#39;Sunny side of pyramid&#39;</span>, <span class="st">&#39;Shady side of pyramid&#39;</span>),
-  <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&#39;#0292D8&#39;</span>, <span class="st">&#39;#F7EA39&#39;</span>, <span class="st">&#39;#C4B632&#39;</span>),
-  <span class="dt">init.angle =</span> -<span class="dv">50</span>, <span class="dt">border =</span> <span class="ot">NA</span>
+  <span class="kw">c</span>(<span class="dv">280</span>,
+    <span class="dv">60</span>, 
+    <span class="dv">20</span>),
+  <span class="kw">c</span>(<span class="st">&#39;Sky&#39;</span>, 
+    <span class="st">&#39;Sunny side of pyramid&#39;</span>, 
+    <span class="st">&#39;Shady side of pyramid&#39;</span>),
+  <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&#39;#0292D8&#39;</span>, 
+          <span class="st">&#39;#F7EA39&#39;</span>, 
+          <span class="st">&#39;#C4B632&#39;</span>),
+  <span class="dt">init.angle =</span> -<span class="dv">50</span>, 
+  <span class="dt">border =</span> <span class="ot">NA</span>
 )</code></pre></div>
 <div class="figure"><span id="fig:pie"></span>
 <img src="#####../content/post/hello-world_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
