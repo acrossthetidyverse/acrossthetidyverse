@@ -1,4 +1,5 @@
 .Rproj.user/*
 public/*
 .Rproj.user
+.DS_Store
 themes/hugo-cactus*
