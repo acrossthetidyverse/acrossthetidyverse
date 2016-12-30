@@ -8,6 +8,7 @@ paginate = 3
 disqusShortname = "shortname"
 googleAnalytics = ""
 pygmentsuseclasses = true
+publishDir = "docs"
 
 [params]
     # Sets the meta tag description, usually reserved for the main page
