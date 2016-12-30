@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Across the Tidyverse</title>
-    <link>/categories/r/index.xml</link>
+    <link>acrossthetidyver.se/categories/r/index.xml</link>
     <description>Recent content on Across the Tidyverse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="acrossthetidyver.se/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hello World</title>
-      <link>/post/hello-world/</link>
+      <link>/acrossthetidyver.se/post/hello-world/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/hello-world/</guid>
+      <guid>/acrossthetidyver.se/post/hello-world/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
