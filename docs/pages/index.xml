@@ -10,12 +10,18 @@
     <atom:link href="/pages/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>about</title>
+      <title>About</title>
       <link>/pages/about/</link>
       <pubDate>Fri, 30 Dec 2016 07:33:27 +0100</pubDate>
       
       <guid>/pages/about/</guid>
-      <description>&lt;p&gt;Stumbling through the tidyverse with stars in our eyes&lt;/p&gt;
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Stumbling through the tidyverse with stars in our eyes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Across The Tidyverse is a blog that aims to demonstrate the application of &lt;a href=&#34;http://tidyverse.org/&#34;&gt;tidyverse&lt;/a&gt; packages and functions in the wild.&lt;/p&gt;
+
+&lt;p&gt;It is run and maintained by &lt;a href=&#34;http://aammd.info/&#34;&gt;Andrew MacDonald&lt;/a&gt;, &lt;a href=&#34;https://github.com/milesmcbain&#34;&gt;Miles McBain&lt;/a&gt;, &lt;a href=&#34;http://www.masalmon.eu/&#34;&gt;Maëlle Salmon&lt;/a&gt;, and &lt;a href=&#34;http://www.njtierney.com/&#34;&gt;Nicholas Tierney&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

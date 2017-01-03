@@ -21,6 +21,43 @@
 
 
 
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
 
 
 
@@ -35,7 +72,7 @@
     <div class="right">
       
         
-        <a class="path" href="../../pages/about/">about</a>
+        <a class="path" href="../../pages/about/">About</a>
       
     </div>
   </div>
@@ -71,7 +108,7 @@
 <p>this is an example of <code>inline code</code>.</p>
 <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
 <p>You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(cars)
 ##      speed           dist       
 ##  Min.   : 4.0   Min.   :  2.00  
 ##  1st Qu.:12.0   1st Qu.: 26.00  
@@ -79,7 +116,7 @@
 ##  Mean   :15.4   Mean   : 42.98  
 ##  3rd Qu.:19.0   3rd Qu.: 56.00  
 ##  Max.   :25.0   Max.   :120.00
-fit &lt;- lm(dist ~ speed, data = cars)
+fit &lt;-<span class="st"> </span><span class="kw">lm</span>(dist ~<span class="st"> </span>speed, <span class="dt">data =</span> cars)
 fit
 ## 
 ## Call:
@@ -87,25 +124,25 @@ fit
 ## 
 ## Coefficients:
 ## (Intercept)        speed  
-##     -17.579        3.932</code></pre>
+##     -17.579        3.932</code></pre></div>
 </div>
 <div id="including-plots" class="section level1">
 <h1>Including Plots</h1>
 <p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
-<pre class="r"><code>par(mar = c(0, 1, 0, 1))
-pie(
-  c(280,
-    60, 
-    20),
-  c(&#39;Sky&#39;, 
-    &#39;Sunny side of pyramid&#39;, 
-    &#39;Shady side of pyramid&#39;),
-  col = c(&#39;#0292D8&#39;, 
-          &#39;#F7EA39&#39;, 
-          &#39;#C4B632&#39;),
-  init.angle = -50, 
-  border = NA
-)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>))
+<span class="kw">pie</span>(
+  <span class="kw">c</span>(<span class="dv">280</span>,
+    <span class="dv">60</span>, 
+    <span class="dv">20</span>),
+  <span class="kw">c</span>(<span class="st">&#39;Sky&#39;</span>, 
+    <span class="st">&#39;Sunny side of pyramid&#39;</span>, 
+    <span class="st">&#39;Shady side of pyramid&#39;</span>),
+  <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&#39;#0292D8&#39;</span>, 
+          <span class="st">&#39;#F7EA39&#39;</span>, 
+          <span class="st">&#39;#C4B632&#39;</span>),
+  <span class="dt">init.angle =</span> -<span class="dv">50</span>, 
+  <span class="dt">border =</span> <span class="ot">NA</span>
+)</code></pre></div>
 <div class="figure"><span id="fig:pie"></span>
 <img src="figures/pie-1.png" alt="A fancy pie chart." width="672" />
 <p class="caption">
