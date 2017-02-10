@@ -38,7 +38,7 @@ airquality %>%
 
 
 ##String to factor convert-all
-`StringAsFactors=FALSE` is defintiely the right way to go, but for modelling you need'll likely need those strings to be factors. Can reverse as variation.
+`StringAsFactors=FALSE` is defintiely the right way to go, but for modelling you'll likely need those strings to be factors. Can reverse as variation.
 
 ```{r, eval = FALSE}
 dat %>%
