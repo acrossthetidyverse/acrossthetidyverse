@@ -57,7 +57,7 @@ airquality %>%
 ```
 
 ##Slick Effect Plot
-Parsing linear model effects works great as a vis. A great intro riff for a rant about how rad `broom` is.
+Parsing linear model effects works great as a vis. A solid intro riff for a rant about how rad `broom` is.
 ```{r, echo=FALSE}
 data("ShipAccidents")
 
