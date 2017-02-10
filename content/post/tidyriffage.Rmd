@@ -1,0 +1,138 @@
+---
+title: "Tidy Riffage"
+author: "Miles McBain"
+date: "2017-02-10"
+output: html_document
+---
+
+##Melting Faces with `dplyr` and `purrr`
+
+```{r echo=FALSE, message = FALSE}
+library(tidyverse)
+library(AER)
+library(broom)
+library(alr3)
+library(modelr)
+```
+
+Despite years of sporadic practice, I'm a fairly average musician. I've always been jealous of those ridiculously talented guitar shredders and Jazz freaks who can just root people to the spot, their jaws hanging open, faces exuding pure joy at the brilliance of what they are witnessing.
+
+But lately something amazing has happened. When I am teaching people the `tidyverse` I feel like I get a glimpse of what it is be that person. Or maybe this person:
+
+<div style="display: block; margin: auto; width: 50%">
+<img src="http://i.giphy.com/MGZP3Kk1GstwI.gif" alt="Math Math Math"></div>
+
+Or perhaps more precisely, this person:
+
+<div style="display: block; margin: auto; width: 50%">
+<img src="https://pbs.twimg.com/media/C2GPLjqWQAAswOY.jpg" alt="You're wizard Hadley" style="width:60%;max-height: 60%"></div>
+
+So let me share with you some `tidyverse` riffs that you too can use to blow minds and melt faces. Presented in increasing order of riffage.
+
+##Lazy NA check
+Basic use of `purrr` can still impress due to results returned as data frames. For added mysteriousity you can swap `map_df()` for `summarise_all()`.
+```{r, eval = TRUE}
+airquality %>%
+    map_df(.f = anyNA)
+```
+
+
+##String to factor convert-all
+`StringAsFactors=FALSE` is defintiely the right way to go, but for modelling you need'll likely need those strings to be factors. Can reverse as variation.
+
+```{r, eval = FALSE}
+dat %>%
+    mutate_if(.predicate = is.character, 
+              .funs = as.factor)
+```
+
+##Lazy NA Vis
+A key component of a great riff is surpsise. Base vis features are the little twist on this dataframe vis for NA. If you like this, you'll love [visdat::vis_dat()](https://github.com/njtierney/visdat)
+```{r}
+airquality %>%
+  map_df(is.na) %>%
+  as.matrix() %>%
+  t() %>%
+  image()
+```
+
+##Slick Effect Plot
+Parsing linear model effects works great as a vis. A great intro riff for a rant about how rad `broom` is.
+```{r, echo=FALSE}
+data("ShipAccidents")
+
+glm_fit <-
+  ShipAccidents %>% 
+  filter(service > 0) %>%
+  glm(data = .,
+      formula = incidents ~ type + construction + operation, 
+      family = poisson(link="log"),
+      offset = log(service))
+```
+```{r}
+glm_fit %>%
+  tidy() %>%
+  mutate(effect.lwr_ci = exp(estimate - 2*std.error),
+       effect = exp(estimate),
+       effect.upr_ci = exp(estimate + 2*std.error)) %>%
+  ggplot() + 
+  geom_point(aes(x=effect, y=term)) +
+  geom_errorbarh(aes(x=effect, 
+                     xmax=effect.upr_ci, 
+                     xmin=effect.lwr_ci, 
+                     y=term)) 
+```
+
+##Bulk Summary Features
+Produce summary stats en-masse. Ripe for variable selection.
+```{r}
+airquality %>%
+    group_by(Month) %>%
+    summarise_at(.cols = vars(Ozone, Solar.R, Wind, Temp),
+                 .funs = funs(q1 = quantile(., probs=0.25),
+                              med = median,
+                              mean = mean,
+                              q3 = quantile(., probs = 0.75),
+                              sd = sd 
+                          ),
+                 na.rm = TRUE
+                 ) %>% names()
+```
+
+##Lag It Out
+All the lags for all the things!
+```{r}
+airquality %>% 
+  arrange(Month, Day) %>%
+  mutate_at(.cols = vars(Ozone, Solar.R, Wind, Temp),
+            .funs = funs(lag1 = lag(.,1),
+                         lag3 = lag(.,3),
+                         lag7 = lag(.,7),
+                         lag14 = lag(.,14))) %>%
+  names()
+```
+
+
+##Search model space over formulae, link functions, ANYTHING.
+`purrr`, `modelr`, `dplyr`, `broom` and `tidyr` all working in a glorious harmony. If Classical Gas could be played with tidy tools it would go something like this. People will weep. Either for beauty or lost time. 
+```{r}
+data("challeng")
+link <- c("logit", "probit", "cloglog")
+formulas <- formulas(.response = ~ cbind(Fail, n-Fail), 
+                     ~ Temp, 
+                     ~ Temp + Pres) 
+
+model_grid <- as_data_frame(expand.grid(formulas, link, stringsAsFactors = FALSE))
+names(model_grid) <- c("formula","link") 
+
+model_grid %>%
+mutate(family = map(link, binomial),
+       model = paste0(formula),
+       fit = pmap(.l = list( formula = formula, family = family),
+                  .f = glm,
+                  data = challeng),
+       results = map(fit, glance)) %>%
+unnest(results)
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EEzyrpfrPEI" frameborder="0" allowfullscreen style="margin: auto"></iframe>
