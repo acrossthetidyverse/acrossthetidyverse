@@ -19,13 +19,15 @@ Despite years of sporadic practice, I'm a fairly average musician. I've always b
 
 But lately something amazing has happened. When I am teaching people the `tidyverse` I feel like I get a glimpse of what it is be that person. Or maybe this person:
 
-<div style="display: block; margin: auto; width: 50%">
-<img src="http://i.giphy.com/MGZP3Kk1GstwI.gif" alt="Math Math Math"></div>
+<div>
+<img src="http://i.giphy.com/MGZP3Kk1GstwI.gif" alt="Math Math Math" style="display: block; margin-left: auto; margin-right: auto">
+</div>
 
 Or perhaps more precisely, this person:
 
-<div style="display: block; margin: auto; width: 50%">
-<img src="https://pbs.twimg.com/media/C2GPLjqWQAAswOY.jpg" alt="You're wizard Hadley" style="width:60%;max-height: 60%"></div>
+<div>
+<img src="https://pbs.twimg.com/media/C2GPLjqWQAAswOY.jpg" alt="You're wizard Hadley" style="display: block; margin-left: auto; margin-right: auto; width:40%; max-height: 40%">
+</div>
 
 So let me share with you some `tidyverse` riffs that you too can use to blow minds and melt faces. Presented in increasing order of riffage.
 
@@ -100,7 +102,7 @@ airquality %>%
 ```
 
 ##Lag It Out
-All the lags for all the things!
+Generating lags can be a drag, but you can create all the lags for all the things with a wave of mutate_at!
 ```{r}
 airquality %>% 
   arrange(Month, Day) %>%
@@ -135,4 +137,7 @@ mutate(family = map(link, binomial),
 unnest(results)
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EEzyrpfrPEI" frameborder="0" allowfullscreen style="margin: auto"></iframe>
+###That's what I'm talkin' 'bout!
+<div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EEzyrpfrPEI" frameborder="0" allowfullscreen style="display: block; margin-left: auto; margin-right: auto"></iframe>
+</div>
