@@ -1,0 +1,7 @@
+article.single section,
+.article-list article {
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+}
