@@ -6,10 +6,48 @@ body {
     font-size: 4em;
 }
 
+.homepage h1.headline {
+    font-size: 2em;
+}
+
+@media (max-width: 52em){
+  .homepage h1.site-title {
+      font-size: 3em;
+  }
+}
+
+@media (max-width: 36em){
+  .homepage h1.site-title {
+      font-size: 1.5em;
+  }
+}
+@media (max-width: 52em){
+.homepage h1.headline {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.5em;
+}}
+
+@media (max-width: 52em){
+article.single h1.headline {
+    font-size: 2em;
+}
+}
+
+@media (max-width: 36em){
+article.single h1.headline {
+    font-size: 1.5em;
+}
+}
+
 article.single section,
 .article-list article {
   padding-left: 32px;
   padding-left: 2rem;
   padding-right: 32px;
   padding-right: 2rem;
+}
+
+article.single pre {
+  padding: 0.5rem;
 }
