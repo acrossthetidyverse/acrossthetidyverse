@@ -124,7 +124,8 @@ formulas <- formulas(.response = ~ cbind(Fail, n-Fail),
                      ~ Temp, 
                      ~ Temp + Pres) 
 
-model_grid <- as_data_frame(expand.grid(formulas, link, stringsAsFactors = FALSE))
+model_grid <- as_data_frame(expand.grid(formulas, link, 
+                                        stringsAsFactors = FALSE))
 names(model_grid) <- c("formula","link") 
 
 model_grid %>%
