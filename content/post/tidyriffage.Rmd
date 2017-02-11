@@ -5,7 +5,7 @@ date: "2017-02-10"
 output: html_document
 ---
 
-##Melting Faces with tidy tools
+##Melting Faces with Tidy Tools
 
 ```{r echo=FALSE, message = FALSE}
 library(tidyverse)
@@ -15,7 +15,7 @@ library(alr3)
 library(modelr)
 ```
 
-Despite years of sporadic practice, I'm a fairly average musician. I've always been jealous of those ridiculously talented guitar shredders and Jazz freaks who can just root people to the spot, their jaws hanging open, faces exuding pure joy at the brilliance of what they are witnessing.
+Despite years of sporadic practice, I'm a fairly average musician. I've always been jealous of those ridiculously talented guitar shredders and Jazz freaks who can just root people to the spot, their jaws hanging open, struck dumb by the brilliance of what they are witnessing.
 
 But lately something amazing has happened. When I am teaching people the `tidyverse` I feel like I get a glimpse of what it is be that person. Or maybe this person:
 
