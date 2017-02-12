@@ -51,3 +51,21 @@ article.single section,
 article.single pre {
   padding: 0.5rem;
 }
+
+img {
+  display: block;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+article.single p code {
+    padding: 0.3em 0.1em;
+    border-radius: 3px;
+    background: #747369;
+    color: #f2f0ec;
+}
