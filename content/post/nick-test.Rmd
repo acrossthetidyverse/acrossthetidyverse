@@ -5,6 +5,21 @@ date: "2016-12-25"
 output: html_document
 ---
 
+```{r include = FALSE}
+library(svglite)
+knitr::opts_chunk$set(
+    echo    = TRUE,
+    warning = FALSE,
+    error   = FALSE,
+    message = FALSE,
+    device  = 'svg',
+    fig.width = 6,
+    fig.align = 'center',
+    fig.height = 6,
+    dpi = 300)
+```
+
+
 So this is a test, to see what other plots and stuff look like.
 
 Let's give naniar a spin, shall we?
@@ -40,7 +55,7 @@ How about tables? How do they look?
 
 ```{r}
 
-summary_missing_var(airquality) %>%
+miss_var_summary(airquality) %>%
   knitr::kable()
 
 ```
