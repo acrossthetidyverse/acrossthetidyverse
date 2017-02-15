@@ -1,5 +1,5 @@
 body {
-    background-color: #272727;
+    background-color: #555555;
 }
 
 .homepage h1.site-title {
@@ -46,26 +46,4 @@ article.single section,
   padding-left: 2rem;
   padding-right: 32px;
   padding-right: 2rem;
-}
-
-article.single pre {
-  padding: 0.5rem;
-}
-
-img {
-  display: block;
-  margin: 0 0 1rem;
-  border-radius: 5px;
-  max-width: 100%;
-}
-
-iframe {
-  max-width: 100%;
-}
-
-article.single p code {
-    padding: 0.05em 0.05em 0.05em 0.05em;
-    border-radius: 4px;
-    background: #002b36;
-    color: #2aa198;
 }

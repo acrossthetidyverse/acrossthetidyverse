@@ -7,6 +7,22 @@ output: html_document
 
 ##Melting Faces with Tidy Tools
 
+```{r include = FALSE}
+library(svglite)
+knitr::opts_chunk$set(
+    echo    = TRUE,
+    warning = FALSE,
+    error   = FALSE,
+    message = FALSE,
+    device  = 'svg',
+    fig.align = 'center',
+    # out.width = "75%",
+    # fig.width = 4,
+    # fig.height = 4,
+    dpi = 200)
+```
+
+
 ```{r echo=FALSE, message = FALSE}
 library(tidyverse)
 library(AER)
@@ -28,6 +44,7 @@ Or perhaps more precisely, this person:
 <div>
 <img src="https://pbs.twimg.com/media/C2GPLjqWQAAswOY.jpg" alt="You're wizard Hadley" style="display: block; margin-left: auto; margin-right: auto; width:40%; max-height: 40%">
 </div>
+
 
 So let me share with you some `tidyverse` riffs that you too can use to blow minds and melt faces. Presented in increasing order of riffage.
 
