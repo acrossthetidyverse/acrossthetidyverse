@@ -64,8 +64,8 @@ iframe {
 }
 
 article.single p code {
-    padding: 0.3em 0.1em;
-    border-radius: 3px;
-    background: #747369;
-    color: #f2f0ec;
+    padding: 0.05em 0.05em 0.05em 0.05em;
+    border-radius: 4px;
+    background: #002b36;
+    color: #2aa198;
 }
